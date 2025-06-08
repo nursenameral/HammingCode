@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamming Error-Correcting Code Simülatörü</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hamming Error-Correcting Code Simülatörü</h1>
+    </header>
+    <div class="container">
+        <label for="dataInput">Veri Girişi (4, 8 veya 16 bit):</label>
+        <input type="text" id="dataInput" maxlength="16" placeholder="1011">
+        <button onclick="generateHammingCode()">Hamming Kodu Oluştur</button>
+        <div id="hammingOutput" class="output"></div>
+
+        <label for="errorPosition">Hata Pozisyonu (1-23):</label>
+        <input type="number" id="errorPosition" min="1" max="23">
+        <button onclick="introduceError()">Hata Oluştur</button>
+        <div id="errorOutput" class="output"></div>
+
+        <button onclick="detectAndCorrectError()">Hata Tespit ve Düzelt</button>
+        <div id="correctionOutput" class="output"></div>
+        <div id="explanation" class="explanation"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
